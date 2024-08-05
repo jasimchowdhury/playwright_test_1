@@ -1,5 +1,5 @@
 {
-  "name": "qa_wolf_take_home",
+  "name": "playwright_test_1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "playwright": "^1.39.0"
+    "playwright": "^1.39.0",
+    "playwright_test_1": "file:",
+    "qa_wolf_take_home": "file:"
   },
   "devDependencies": {
     "@playwright/test": "^1.39.0",
