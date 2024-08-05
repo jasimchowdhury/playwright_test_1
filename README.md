@@ -1,57 +1,37 @@
-# 🐺 QA Wolf Take Home Assignment
+Playwright Hacker News Validation Script
+This project contains a script that uses JavaScript and Microsoft's Playwright framework to validate the order of articles on Hacker News.
 
-Welcome to the QA Wolf take home assignment for our [QA Engineer](https://www.notion.so/qawolf/QA-Wolf-QA-Engineer-Remote-156203a1e476459ea5e6ffca972d0efe) role! We appreciate your interest and look forward to seeing what you come up with.
+Objective
+The goal of this script is to navigate to the Hacker News Newest page and verify that the first 100 articles are sorted from newest to oldest. This ensures the accuracy of article sorting on the page.
 
-## Instructions
+Setup
+Install Node Modules
+Begin by installing the required Node modules. In the project root directory, run:
 
-This assignment has two questions as outlined below. When you are done, send [qa-hiring@qawolf.com](mailto:qa-hiring@qawolf.com) the following:
+npm install
 
-1. A link to a zip file of this folder on Google Drive 
+Edit the Script
+Open the index.js file in your preferred code editor. This file contains the Playwright script that performs the validation.
 
-2. A note indicating your work location (Country/State)
+Run the Script
+Execute the script with the following command:
+node index.js
 
-3. A note of how you found this job post (LinkedIn, Handshake, Wellfound, referral, etc.)
+The script will navigate to Hacker News Newest, fetch the titles of the first 100 articles, and check that they are sorted from newest to oldest.
 
-### Question 1
+Dependencies
+The project relies on the following dependencies:
 
-In this assignment, you will create a script on [Hacker News](https://news.ycombinator.com/) using JavaScript and Microsoft's [Playwright](https://playwright.dev/) framework. 
+playwright: A Node.js library to automate browsers (version ^1.39.0).
+@playwright/test: Playwright's test runner for writing and executing tests (version ^1.39.0).
+@types/node: TypeScript definitions for Node.js (version ^20.8.9).
+How It Works
+The script uses Playwright to open a browser and navigate to the Hacker News Newest page.
+It then retrieves the titles of the first 100 articles.
+The script verifies that the articles are ordered from newest to oldest.
+Any discrepancies in sorting will be reported.
+Running Tests
+No specific tests are included beyond the core validation script. If you wish to add more tests or functionality, ensure you use Playwright's capabilities for browser automation.
 
-1. Install node modules by running `npm i`.
-
-2. Edit the `index.js` file in this project to go to [Hacker News/newest](https://news.ycombinator.com/newest) and validate that EXACTLY the first 100 articles are sorted from newest to oldest. You can run your script with the `node index.js` command.
-
-Note that you are welcome to update Playwright or install other packages as you see fit, however you must utilize Playwright in this assignment.
-
-### Question 2
-
-Why do you want to work at QA Wolf? Please record a short, ~2 min video that includes:
-
-1. Your answer 
-
-2. A walk-through demonstration of your code, showing a successful execution
-
-Post the link in `why_qa_wolf.txt` (Please use [Loom](https://www.loom.com) to record your response). The answer and walkthrough should be combined into *one* video.
-
-## Frequently Asked Questions
-
-### What is your hiring process? When will I hear about next steps?
-
-This take home assignment is the first step in our hiring process, followed by a final round interview if it goes well. **We review every take home assignment submission and promise to get back to you either way within one week (usually sooner).** The only caveat is if we are out of the office, in which case we will get back to you when we return. If it has been more than one week and you have not heard from us, please do follow up.
-
-The final round interview is a 2-hour technical work session that reflects what it is like to work here. We provide a $150 stipend for your time for the final round interview regardless of how it goes. After that, there may be a short chat with our director about your experience and the role.
-
-Our hiring process is rolling where we review candidates until we have filled our openings. If there are no openings left, we will keep your contact information on file and reach out when we are hiring again.
-
-### How do you decide who to hire?
-
-We evaluate candidates based on three criteria:
-
-- Technical ability (as demonstrated in the take home and final round)
-- Customer service orientation (as this role is customer facing)
-- Alignment with our values (captured [here](https://www.notion.so/qawolf/QA-Wolf-QA-Engineer-Remote-156203a1e476459ea5e6ffca972d0efe))
-
-This means whether we hire you is based on how you do during our interview process, not on your previous experience (or lack thereof). Note that you will also need to pass a background check to work here as our customers require this.
-
-### How can I help my application stand out?
-
-We've found that our best hires have been the most enthusiastic throughout our process. If you are very excited about working here, please feel free to go above and beyond on this assignment.
+Contributing
+Feel free to fork the repository and submit pull requests with any improvements or additional features.
