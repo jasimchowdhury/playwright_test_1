@@ -1,0 +1,40 @@
+<mxfile host="65bd71144e">
+    <diagram id="mL3f5SEPEbb_VBXUwkMn" name="Page-1">
+        <mxGraphModel dx="2290" dy="1948" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Date: 29/07/2024" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="30" width="780" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="What is Playwright?&lt;div&gt;Watched tutorial on Playwright, link:&amp;nbsp;https://youtu.be/4_m3HsaNwOE?si=H34p5bZZ5rQz9BTG&lt;/div&gt;&lt;div&gt;link:&amp;nbsp;https://youtu.be/gLK4_gRH7mY?si=g8cX6uS5tgX2LASa&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="2">
+                    <mxGeometry x="110" y="20" width="520" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Date: 31/07/2024" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="120" width="780" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;div&gt;Problem to solve:&amp;nbsp;&lt;b&gt;&lt;u&gt;go to Hacker News/newest and validate that EXACTLY the first 100 articles are sorted from newest to oldest.&amp;nbsp;&lt;/u&gt;&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Initial Plan: &lt;/b&gt;inspect posting date or time, collect the values, compare the values.&lt;/div&gt;visited the webpage for inspection; link:&amp;nbsp;https://news.ycombinator.com/newest&amp;nbsp;&lt;div&gt;&lt;b&gt;Findings: &amp;lt;&lt;/b&gt;span has a class called age and title contains the value in date-time strings&lt;b&gt;&amp;gt;.&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Problem to Solve:&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;1.1&lt;/b&gt;-&lt;b&gt;&amp;nbsp;&lt;/b&gt;How to collect the value? = $$ will collect the value as a string&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1.2- where to store the value? - can push it to a array&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1.3 - once pushed to array as string, how will it be compared? - look for way to convert the date-time strings&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-found it, date() function will convert it, date().valueOf() will give number in milliseconds.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- can compare the values, &lt;b&gt;higher value will be the newest posted post.&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;1.4- how will the 100 posts data will be collected? - &lt;/b&gt;can use for loop.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;finally can use soft assertions to compare the value&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="4">
+                    <mxGeometry x="20" y="40" width="740" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Date: 01/08/2024" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="410" width="790" height="460" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;b&gt;1. Installed Playwright&lt;/b&gt;&lt;div&gt;&lt;b&gt;2. test code said can not find any test.&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;3. Changed the directory in config file, completed the first example test.&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;- not able to collect the value using text.content&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;- managed to collect value of class age using $$&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;-age[i] gave the values and .getattribute extracted the title value.&amp;nbsp; (relief)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;- managed to pushed the value to date() and to array.&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;- for loop used but it only getting 30 values not 100, - not sure why?&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;- learned about pagination, have to use $('[]') to go to next page.&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;????&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;???&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;?&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Different techniques/logic - awaiting for ideas to break this procrastination loop&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;???&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;??&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;?&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;if we collect all the values without changing the page, we can use for loop method, but we do not collect all the values and need move to&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;next page to collect more values until we reach the desired value. if collected value is less than we can do pagination and keep&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;repeating the process until targeted value is reach, than how do you stop, break the loop when desired value is reached.&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;*create a constant, give it a fixed value.&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;*create another constant as a counter for collecting value&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;*when second constant is bigger than first constant break the loop.&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;///&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;-while loop required to implement this logic, and for loop inside it.&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;-used soft assertions, so that test execute all the code without stopping.&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;//////////&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;worked-&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Mission Accomplished ; )&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="6">
+                    <mxGeometry x="-5" y="20" width="800" height="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Date: 02/08/2024" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="890" width="790" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="*record 2 min clip&lt;div&gt;*add location&lt;/div&gt;&lt;div&gt;*submit the application&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="8">
+                    <mxGeometry x="325" y="30" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Date: Unknown" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="1010" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="*awaiting call from QA_wolf" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="10">
+                    <mxGeometry x="15" y="30" width="170" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
